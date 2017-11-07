@@ -3,7 +3,7 @@
     $bg-col: #b5efff; //background color
     $mrgn-side: 120px; // side margins of items in main white block
     $pdng-items: 10px; // paddings between blocks
-    $w-wb: 525px; // width of wide block
+    $w-wb: 490px; // width of wide block
     $w-nb: $w-wb / 2; //width of narrow block
     * {
         box-sizing: border-box;
@@ -13,16 +13,14 @@
 
     body {
         background-color: $bg-col;
-        display: flex;
-        justify-content: center;
     }
 
     main {
         background-color: #fff;
         border-radius: 10px;
-        margin: 30px 20px;
+        margin: 30px auto;
         box-shadow: 0 0 19px 2px #78e2ff;
-        width: 1280px;
+        width: 1200px;
         height: auto;
     }
     /*navagation bar
@@ -43,6 +41,10 @@
         flex: 0 1 50px;
         margin: 10px $mrgn-side 10px;
         /*need to review*/
+    }
+
+    .cube:hover {
+        transform: translate(3px, 2px) scale(1.2);
     }
 
     .rightFace,
@@ -101,6 +103,10 @@
         margin: 0 $mrgn-side;
     }
 
+    .portrait:hover {
+        transform: scale(1.1);
+    }
+
     .portrait img {
         width: 30px;
         height: 30px;
@@ -144,7 +150,7 @@
         flex-flow: row wrap;
         height: 100%;
         width: 50%;
-        flex: 1 0 auto;
+        margin-bottom: 30px;
     }
 
     .flex-container div[class^=flex-item] {
@@ -154,14 +160,10 @@
 
     .flex-item {
         &.wide {
-            // width: 100%;
-            // height: percentage(2/5);
             width: $w-wb;
             height: $w-wb * 0.5062;
         }
         &.narrow {
-            // width: 50%;
-            // height: percentage(3/5);
             width: $w-nb;
             height: $w-nb * 1.434;
         }
@@ -254,4 +256,8 @@
         border-radius: 4px;
         position: absolute;
         bottom: 30px;
+    }
+
+    .item-button:hover {
+        transform: scale(1.05)
     }
