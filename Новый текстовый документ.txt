@@ -1,9 +1,0 @@
-box-shadow: rgba(0, 0, 0, 0.2) 0px 8px 16px 0px
-
-width: 498px;
-    height: 284px
-
-
-text-box 1st:
-rgba(73, 156, 151, 0.8) 0px 2px 12px 0px
-    border-radius: 4px;
