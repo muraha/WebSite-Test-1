@@ -13,7 +13,7 @@ gulp.task('lint', () =>
             console: true
         }],
         debug: true
-    }));
+    }))
 );
 
 gulp.task('scss', function () {
