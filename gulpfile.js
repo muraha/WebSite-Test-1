@@ -1,7 +1,20 @@
 let gulp = require('gulp'),
     scss = require('gulp-sass'),
     browserSync = require('browser-sync'),
-    autoprefixer = require('gulp-autoprefixer');
+    autoprefixer = require('gulp-autoprefixer'),
+    stylelint = require('gulp-stylelint');
+
+gulp.task('lint', () =>
+    gulp.src(bases.scss + 'app/scss.scss')
+    .pipe(stylelint({
+        failAfterError: true,
+        reporters: [{
+            formatter: 'verbose',
+            console: true
+        }],
+        debug: true
+    }));
+);
 
 gulp.task('scss', function () {
     gulp.src('app/scss/style.scss')
